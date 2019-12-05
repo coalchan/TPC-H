@@ -11,6 +11,7 @@
 1. cd dbgen && cp makefile.suite makefile
 
 2. 修改 makefile 108 行
+
 `vi makefile`
 
 ```
@@ -29,6 +30,7 @@ WORKLOAD = TPCH
 ```
 
 3. 在 tpcd.h 增加 Hive 对应方式
+
 `vi tpcd.h`
 
 ```
@@ -43,7 +45,14 @@ WORKLOAD = TPCH
 ```
 
 3. 执行 make 命令
+
 `make`
+
+4. 生成数据
+
+`./dbgen -s 1`
+
+说明：-s 代表数据规模因子，1 代表产生 1G 的数据量，在当前文件夹下生成的8个 `.tbl` 文件就是我们所需要的数据。
 
 ## 问题
 
